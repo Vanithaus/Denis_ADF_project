@@ -1,0 +1,36 @@
+{
+	"name": "SubCategories_B",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS2ADF",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sub categories",
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "SubCategories.xlsx",
+				"folderPath": "bronze",
+				"fileSystem": "medallion"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "SubCategoryKey",
+				"type": "String"
+			},
+			{
+				"name": "CategoryKey",
+				"type": "String"
+			},
+			{
+				"name": "SubCategory Name",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,25 @@
+{
+	"name": "product_file2bronze",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADF_2_ADLS",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "product.csv",
+				"folderPath": "bronze",
+				"fileSystem": "medallion"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

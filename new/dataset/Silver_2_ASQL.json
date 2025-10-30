@@ -1,0 +1,17 @@
+{
+	"name": "Silver_2_ASQL",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "",
+			"table": "Denis_tb"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

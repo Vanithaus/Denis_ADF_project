@@ -1,0 +1,34 @@
+{
+	"name": "Geography_B",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ADLS2ADF",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Geography.json",
+				"folderPath": "bronze",
+				"fileSystem": "medallion"
+			}
+		},
+		"schema": {
+			"type": "object",
+			"properties": {
+				"Country": {
+					"type": "string"
+				},
+				"Town": {
+					"type": "string"
+				},
+				"Wikipedia": {
+					"type": "string"
+				}
+			}
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
